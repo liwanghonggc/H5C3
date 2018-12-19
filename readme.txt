@@ -56,4 +56,16 @@
           <source src="../mp3/mp4.mp4" type="video/mp4">
       </video>
 
+6、H5的dom操作
+   1) querySelector:获取单个元素,如果获取的元素不止一个,那么只会返回满足条件的第一个元素
+                    参数要求:如果是类选择器,必须添加. 如果是id选择器,必须添加#,否则当成标签处理
+
+   2) querySelectorAll获取满足条件的所有元素--数组
+
+7、H5自定义属性
+   <p data-school-name="itcast">传智播客</p>
+
+   var p = document.querySelector("p");
+   var value = p.dataset["data-school-name"];
+
 
