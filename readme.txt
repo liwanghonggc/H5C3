@@ -68,4 +68,53 @@
    var p = document.querySelector("p");
    var value = p.dataset["data-school-name"];
 
+8、网络状态改变事件
+   1) ononline:网络连通的时候触发这个事件
+      window.addEventListener("online", function(){
+              alert("网络连通了");
+      });
+   2) onoffline:网络断开时触发
+
+9、全屏API
+
+10、文件读取接口,文件读取预览效果
+
+11、拖拽接口,常见拖拽效果
+
+12、地理定位接口,获取用户位置信息
+
+13、web存储接口,实现数据的读写
+
+14、应用缓存接口
+
+15、多媒体接口,实现自定义播放器
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
