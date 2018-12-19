@@ -28,5 +28,32 @@
    3) oninvalid:当验证不通过时触发
 
 4、H5新增的其他一些标签
+   1) 进度条progress
+   2) 度量器,衡量当前的进度值meter
+
+5、H5多媒体标签
+   1) audio
+      <audio src="../mp3/aa.mp3" controls autoplay></audio>
+      src:播放文件的路径
+      controls:音频播放器的控制器面板
+      autoplay:自动播放
+      loop:循环播放
+
+   2) video
+      <video src="../mp3/mp4.mp4" poster="../images/l1.jpg" controls  height="600"></video>
+      src:播放文件的路径
+      controls:音频播放器的控制器面板
+      autoplay:自动播放
+      loop:循环播放
+      poster:指定视频还没有完全下载完毕,或者用户没有点击播放前显示的封面.默认显示当前视频文件的第一副图像
+      width:视频的宽度
+      height:视频的高度
+
+      source:因为不同的浏览器所支持的视频格式不一样,为了保证用户能够看到视频,我们可以提供多个视频文件让浏览器自动选择
+      <video controls>
+          <!--视频源，可以有多个源-->
+          <source src="../mp3/flv.flv" type="video/flv">
+          <source src="../mp3/mp4.mp4" type="video/mp4">
+      </video>
 
 
