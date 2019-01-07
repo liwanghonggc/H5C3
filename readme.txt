@@ -76,6 +76,52 @@
    2) onoffline:网络断开时触发
 
 9、全屏API
+   全屏操作的主要方法和属性
+   1) requestFullScreen()  开启全屏显示,不同浏览器需要添加不同的前缀
+                           chrome:webkit   firefox:moz   ie:ms   opera:o
+
+                           全屏操作
+                           document.querySelector("#full").onclick=function(){
+
+                               /*div.requestFullScreen();*/
+                               /*div.webkitRequestFullScreen();*/
+                               /*div.mozRequestFullScreen();*/
+                               /*使用能力测试添加不同浏览器下的前缀*/
+
+                               if(div.requestFullScreen){
+                                   div.requestFullScreen();
+                               }
+                               else if(div.webkitRequestFullScreen){
+                                   div.webkitRequestFullScreen();
+                               }
+                               else if(div.mozRequestFullScreen){
+                                   div.mozRequestFullScreen();
+                               }
+                               else if(div.msRequestFullScreen){
+                                   div.msRequestFullScreen();
+                               }
+                           }
+
+   2) cancelFullScreen()   退出全屏显示,也添加前缀,在不同的浏览器下退出全屏只能使用document来实现
+
+                               退出全屏
+                               document.querySelector("#cancelFull").onclick=function(){
+                                   if(document.cancelFullScreen){
+                                       document.cancelFullScreen();
+                                   }
+                                   else if(document.webkitCancelFullScreen){
+                                       document.webkitCancelFullScreen();
+                                   }
+                                   else if(document.mozCancelFullScreen){
+                                       document.mozCancelFullScreen();
+                                   }
+                                   else if(document.msCancelFullScreen){
+                                       document.msCancelFullScreen();
+                                   }
+                               }
+
+   3) fullScreenElement    是否是全屏状态,也只能使用document进行判断
+
 
 10、文件读取接口,文件读取预览效果
 
