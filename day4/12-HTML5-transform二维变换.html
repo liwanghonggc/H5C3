@@ -8,6 +8,7 @@
             padding: 0;
             margin: 0;
         }
+
         div{
             width: 100px;
             height: 100px;
@@ -17,6 +18,7 @@
             /*添加过渡效果  css样式名称 耗时*/
             transition: transform 2s;
         }
+
         /*移动translate*/
         div:first-of-type:active{
             /*使用transform实现元素的移动 a.移动是参照元素的左上角 b.执行完毕之后会恢复到原始状态
@@ -30,17 +32,19 @@
             /*transform:translateX(300px);*/
             transform:translateY(300px);
         }
+
         /*缩放：scale*/
         div:nth-of-type(2):active{
-            /*实现缩放  1指不缩放，>1.01放大  <0.99缩小  参照元素的几何中心
-            1.如果只有一个参数，就代表x和y方向都进行相等比例的缩放
-            2.如果有两个参数，就代表x/y方向*/
-            /*transform: scale(2);*/
+            /*实现缩放  1指不缩放,>1.01放大  <0.99缩小  参照元素的几何中心
+            1.如果只有一个参数,就代表x和y方向都进行相等比例的缩放
+            2.如果有两个参数,就代表x/y方向*/
+            transform: scale(2);
             /*transform: scale(2,1);*/
             /*缩放指定的方向 */
             /*transform:scaleX(0.5);*/
-            transform:scaleY(0.5);
+            /*transform:scaleY(0.5);*/
         }
+
         /*旋转：rotate*/
         div:nth-of-type(3){
             /*设置旋转轴心
@@ -49,6 +53,7 @@
             background-color: purple;
             transform-origin: left top;
         }
+
         div:nth-of-type(3):active{
             /*transform:rotate(-90deg);
             transform: translateX(700px);*/
@@ -56,10 +61,11 @@
             transform: translateX(700px) rotate(-90deg);
             /*transform: rotate(-90deg) translateX(700px);*/
         }
+
         /*斜切：skew*/
         div:nth-of-type(4):active{
             background-color: blue;
-            /*如果角度为正，则往当前轴的负方向斜切，如果角度为，则往当前轴的正方向斜切*/
+            /*如果角度为正,则往当前轴的负方向斜切,如果角度为,则往当前轴的正方向斜切*/
             transform:skew(-30deg);
             /*transform:skew(30deg,-30deg);*/
             /*设置某个方向的斜切值*/
