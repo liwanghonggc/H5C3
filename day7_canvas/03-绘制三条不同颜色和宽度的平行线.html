@@ -17,6 +17,7 @@
 
     /*画平行线*/
     ctx.beginPath();/*Kai*/
+
     /*蓝色  10px*/
     ctx.moveTo(100,100);
     ctx.lineTo(300,100);
@@ -26,6 +27,8 @@
     ctx.stroke();
 
 
+    //开启新路径可以解决样式覆盖的问题
+    ctx.beginPath();
     /*红色 20px*/
     ctx.moveTo(100,200);
     ctx.lineTo(300,200);
@@ -35,6 +38,7 @@
     ctx.stroke();
 
 
+    ctx.beginPath();
     /*绿色 30px*/
     ctx.moveTo(100,300);
     ctx.lineTo(300,300);
