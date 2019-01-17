@@ -30,7 +30,7 @@
     var xLineTotal = Math.floor(canvasHeight / gridSize);
     for (var i = 0; i <= xLineTotal; i++) {
         ctx.beginPath();
-        ctx.moveTo(0, i * gridSize - 0.5 );
+        ctx.moveTo(0, i * gridSize - 0.5);
         ctx.lineTo(canvasWidth, i * gridSize - 0.5);
         ctx.strokeStyle = '#eee';
         ctx.stroke();
@@ -39,8 +39,8 @@
     var yLineTotal = Math.floor(canvasWidth / gridSize);
     for (var i = 0; i <= yLineTotal; i++) {
         ctx.beginPath();
-        ctx.moveTo(i*gridSize - 0.5 ,0);
-        ctx.lineTo(i*gridSize - 0.5 ,canvasHeight);
+        ctx.moveTo(i * gridSize - 0.5, 0);
+        ctx.lineTo(i * gridSize - 0.5, canvasHeight);
         ctx.strokeStyle = '#eee';
         ctx.stroke();
     }
