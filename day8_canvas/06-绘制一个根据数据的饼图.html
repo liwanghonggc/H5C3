@@ -32,7 +32,7 @@
     console.log(total);
     /*第二是转换成弧度的时候就可以去绘制扇形 减少一次遍历*/
     data.forEach(function (item, i) {
-        var angle = Math.PI * 2 * (item/total);
+        var angle = Math.PI * 2 * (item / total);
         angleList.push(angle);
     });
     console.log(angleList);
@@ -40,8 +40,8 @@
 
     var w = ctx.canvas.width;
     var h = ctx.canvas.height;
-    var x0 = w/2;
-    var y0 = h/2;
+    var x0 = w / 2;
+    var y0 = h / 2;
     /*获取随机颜色*/
     var getRandomColor = function () {
         var r = Math.floor(Math.random() * 256);
@@ -52,12 +52,12 @@
 
 
     var startAngle = 0;
-    angleList.forEach(function (item,i) {
+    angleList.forEach(function (item, i) {
         /*上一次绘制的结束弧度等于当前次的起始弧度*/
         var endAngle = startAngle + item;
         ctx.beginPath();
-        ctx.moveTo(x0,y0);
-        ctx.arc(x0,y0,150,startAngle,endAngle);
+        ctx.moveTo(x0, y0);
+        ctx.arc(x0, y0, 150, startAngle, endAngle);
         ctx.fillStyle = getRandomColor();
         ctx.fill();
         /*记录当前的结束位置作为下一次的起始位置*/
